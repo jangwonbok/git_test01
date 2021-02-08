@@ -1,3 +1,458 @@
-뮤플러스 git 연습 -장원복-
 
-박병조 수정1
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>MobileHunter</title>
+  <!-- javascript -->
+  <script src="http://112.217.230.10/source/jquery-1.12.3.js"></script>
+  <script src="../js/jquery-1.12.3.js"></script>
+ </head>
+
+ <body>
+	<div id="wrap">
+        <header id="header">
+            <h1>
+                <a href="http://www.muplus.co.kr/new/main/index.html"><img src="http://112.217.230.10/web_test/muplus_logo.png" alt="muplus"></a>
+            </h1>
+            <div class="utill-area">
+                <a href="https://validator.w3.org/" target="_blank">W3C Markup Validator</a>
+                <a href="https://accessibility.kr/nia/check.php" target="_blank">웹접근성 자가진단</a>
+            </div>
+        </header>
+
+        <section id="container">
+            <div class="pjt-box">
+
+                <div class="pjt-tit">
+                    <h2>Mobile Hunter</h2>
+                    <ul>
+                        <li><span>DESIGNER</span> 안성은 과장 <em>|</em> 010.9133.4378 <em>|</em> d_seongeun@muplus.co.kr</li>
+                        <!-- <li><span>DESIGNER</span> 이미경 대리 <em>|</em> 010.5579.8920 <em>|</em> tpfvm0202@muplus.co.kr</li> -->
+                        <li><span>PUBLISHER</span> 박병조 과장 <em>|</em> 010.4841.3378 <em>|</em> eva01x@muplus.co.kr</li>
+                       <!--  <li><span>PUBLISHER</span> 장원복 과장 <em>|</em> 010.8834.0951 <em>|</em> jwb@muplus.co.kr</li>  -->
+                        <li><span>PUBLISHER</span> 송우림 대리 <em>|</em> 010.3654.2167 <em>|</em> onhoi1259@muplus.co.kr</li>
+                    </ul>
+                </div>
+
+                <div class="count">
+                    <span>총 Page : <em id="pCount"></em></span>
+                    <span>완료된 Page : <em id="cCount"></em></span>
+                    <span class="color">진행률 : <em id="progress"></em> % </span>
+                    <div class="btn-area">
+						<!-- <select>
+							<option>작업자</option>
+							<option>박병조</option>
+							<option>장원복</option>
+							<option>송우림</option>
+						</select> -->
+                        <!-- <button class="o-btn">Note 전체열기</button>
+                        <button class="c-btn">Note 전체닫기</button> -->
+                    </div>
+                </div>
+
+                <div class="pjt-tbl">
+
+                    <div class="pjt-head">
+                        <span>1Depth</span>
+                        <span>2Depth</span>
+                        <span>3Depth</span>
+                        <span>4Depth</span>
+                        <span>5Depth</span>
+                        <span class="poplay">Pop/Lay</span>
+                        <span class="url">File Name</span>
+                        <span class="status">완료</span>
+                        <span class="date">Update</span>
+                        <span class="worker">담당</span>
+                        <span class="memo">Note</span>
+                    </div>
+
+                    <div class="depth"> <!-- 공통 -->
+
+                        <div class="pjt-depth">
+                            <span>공통</span> <!-- depth1 -->
+                        </div>
+                        <div class="pjt-list">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width:80px">
+                                    <col style="width:450px">
+                                    <col style="width:60px">
+                                    <col style="width:110px">
+                                    <col style="width:100px">
+                                    <col style="width:65px">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>error</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/공통/error404.html" target="_blank">error404.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>mail</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/공통/mail.html" target="_blank">mail.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>견적문의</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/공통/견적문의.html" target="_blank">견적문의.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>체험판 신청</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/공통/체험판신청.html" target="_blank">체험판신청.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+					<div class="depth"> <!-- 메인 -->
+
+                        <div class="pjt-depth">
+                            <span>메인</span> <!-- depth1 -->
+                        </div>
+                        <div class="pjt-list">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width:80px">
+                                    <col style="width:450px">
+                                    <col style="width:60px">
+                                    <col style="width:110px">
+                                    <col style="width:100px">
+                                    <col style="width:65px">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>메인</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/main/main.html" target="_blank">main.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">박병조</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="depth"> <!-- 회사소개 -->
+
+                        <div class="pjt-depth">
+                            <span>회사소개</span> <!-- depth1 -->
+                        </div>
+                        <div class="pjt-list">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width:80px">
+                                    <col style="width:450px">
+                                    <col style="width:60px">
+                                    <col style="width:110px">
+                                    <col style="width:100px">
+                                    <col style="width:65px">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>기업정보</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/회사소개/기업정보.html" target="_blank">기업정보.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>연혁</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/회사소개/연혁.html" target="_blank">연혁.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>오시는길</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/회사소개/오시는길.html" target="_blank">오시는길.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="depth"> <!-- 고객지원 -->
+
+                        <div class="pjt-depth">
+                            <span>고객지원</span> <!-- depth1 -->
+                        </div>
+                        <div class="pjt-list">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width:80px">
+                                    <col style="width:450px">
+                                    <col style="width:60px">
+                                    <col style="width:110px">
+                                    <col style="width:100px">
+                                    <col style="width:65px">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>공지사항</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/고객지원/공지사항.html" target="_blank">공지사항.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">박병조</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>공지사항</td> <!-- depth2 -->
+                                        <td>상세</td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/고객지원/공지사항_view.html" target="_blank">공지사항_view.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q&amp;A</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/고객지원/QnA.html" target="_blank">QnA.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q&amp;A</td> <!-- depth2 -->
+                                        <td>상세</td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/고객지원/QnA_view.html" target="_blank">QnA_view.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q&amp;A</td> <!-- depth2 -->
+                                        <td>쓰기</td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/고객지원/QnA_write.html" target="_blank">QnA_write.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FAQ</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/고객지원/FAQ.html" target="_blank">FAQ.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="depth"> <!-- 고객지원 -->
+
+                        <div class="pjt-depth">
+                            <span>솔루션 소개</span> <!-- depth1 -->
+                        </div>
+                        <div class="pjt-list">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width:80px">
+                                    <col style="width:450px">
+                                    <col style="width:60px">
+                                    <col style="width:110px">
+                                    <col style="width:100px">
+                                    <col style="width:65px">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>LIMS-KOLIMS 소개</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/솔루션소개/LIMS-KOLIMS_소개.html" target="_blank">LIMS-KOLIMS_소개.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LIMS-KOLIMS 업무관리</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/솔루션소개/LIMS-KOLIMS_업무관리.html" target="_blank">LIMS-KOLIMS_업무관리.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LAS-KOLAS</td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="html/솔루션소개/LAS-KOLAS.html" target="_blank">LAS-KOLAS.html</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-16</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="depth"> <!-- 고객지원 -->
+
+                        <div class="pjt-depth">
+                            <span>다운로드</span> <!-- depth1 -->
+                        </div>
+                        <div class="pjt-list">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width:80px">
+                                    <col style="width:450px">
+                                    <col style="width:60px">
+                                    <col style="width:110px">
+                                    <col style="width:100px">
+                                    <col style="width:65px">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td></td> <!-- depth2 -->
+                                        <td></td> <!-- depth3 -->
+                                        <td></td> <!-- depth4 -->
+                                        <td></td> <!-- depth5 -->
+                                        <td class="poplay"></td>
+                                        <td class="url"><a href="http://112.217.230.10/project_/MobileHunter_HTML_download/MobileHunter_20201119.zip" target="_blank">MobileHunter_20201119</a></td>
+                                        <td class="status"><span class="off"></span></td>
+                                        <td class="date">2020-11-19</td>
+                                        <td class="worker">송우림</td>
+                                        <td class="memo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <style>
+        a,article,aside,audio,blockquote,body,button,canvas,code,dd,details,div,dl,dt,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,input,legend,li,mark,menu,nav,ol,output,p,pre,ruby,section,select,summary,td,textarea,th,time,ul,video{margin:0;padding:0}dl,li,menu,ol,ul{list-style-type:none}button{border-radius:0;cursor:pointer}body,button,input,pre,select,td,textarea,th{font-size:16px;font-family:'맑은고딕','Malgun Gothic';color:#222}table{border-spacing:0;border-collapse:collapse}em{font-style:normal}body{background-color:#ebebeb}#wrap{padding-top:60px}#header{position:fixed;top:0;left:0;z-index:99;width:100%;height:58px;border-bottom:2px solid #d71921;background-color:#fff}#header h1{position:absolute;top:50%;left:20px;margin-top:-18px}#header h1 a{display:block;width:65px}#header h1 a img{width:100%}#header .utill-area{position:absolute;top:15px;right:20px}#header .utill-area a{display:inline-block;color:#222;font-size:13px;text-decoration:underline}#header .utill-area a+a{margin-left:10px}.gnb-area{position:absolute;top:16px;left:200px}.gnb-area li{display:inline-block;padding:0 15px}.gnb-area li a{display:block;font-weight:700;font-size:14px}.count .btn-area select{font-size:12px;height:24px}#container{padding:15px 20px 15px 15px}.noteArea.on{display:table-row}.pjt-box{background-color:#fff;padding:30px 30px;-webkit-box-shadow:.5px .866px 3px 0 rgba(51,51,51,.2);box-shadow:.5px .866px 3px 0 rgba(51,51,51,.2)}.pjt-tit{overflow:hidden;margin:10px 0 20px}.pjt-tit h2{float:left;font-size:35px;font-weight:700}.pjt-tit ul{float:right}.pjt-tit ul li{font-size:12px}.pjt-tit ul li+li{margin-top:5px}.pjt-tit ul li span{display:inline-block;margin-right:5px;font-size:12px;font-weight:500}.pjt-tit ul li em{display:inline-block;margin:0 3px}.count{margin-bottom:10px;text-align:left}.count span{font-size:12px}.count span+span{margin-left:10px}.count span.color em{color:#d71921}.count span em{font-size:18px;font-weight:700}.noteArea{display:none;padding:7px 5px;background-color:#f7f7f7}.noteArea pre{padding:15px;border:1px solid #ddd;background-color:#fff;color:#ee4048;font-size:13px;white-space:pre-line}.memoBtn{display:inline-block;position:relative;width:20px;height:20px;border:1px solid #ddd;color:#222;font-size:17px;background:0 0}.memoBtn.active:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.memoBtn:before{content:"+";position:absolute;top:50%;left:50%;margin-left:-5px;margin-top:-13px}.btn-area{float:right}.c-btn,.o-btn{border:1px solid #ddd;font-size:12px;padding:3px 5px}.pjt-head{display:-webkit-box;display:-ms-flexbox;display:flex}.pjt-head span{padding:10px 0 10px 0;font-weight:700;text-align:center}.pjt-head span{min-height:30px;-webkit-box-sizing:border-box;box-sizing:border-box;padding:7px 5px;font-size:13px;border-bottom:1px solid #ddd}.pjt-head span:nth-child(-n+5){width:calc((100% - 985px)/ 4)}.pjt-head span:first-child{width:120px;border-left:none}.poplay{width:80px;text-align:center}.url{width:450px}.url a{color:#6b97ce;text-decoration:underline}.url a:hover,.url a:visited{color:#ba142f}.status{width:60px;text-align:center}.status em{display:inline-block;font-size:14px;color:#d71921;background:0 0}.status em.off:before{content:"○";font-weight:700}.status em.on:before{content:"●"}.date{width:110px;text-align:center}.worker{width:100px;text-align:center}.memo{width:65px;text-align:center}.pjt-tbl{border-top:2px solid #d71921}.depth{display:table;width:100%; margin-top:3px; border-top:1px solid #ddd;}.pjt-head{display:-webkit-box;display:-ms-flexbox;display:flex}.pjt-head span{padding:10px 0 10px 0;font-weight:700;text-align:center}.pjt-depth{display:table-cell;width:120px;vertical-align:middle;border-bottom:1px solid #ddd;background-color:#f7f7f7}.pjt-depth span{display:block;min-height:30px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:7px 5px;font-size:13px;font-weight:700}.tbl{width:100%;table-layout:fixed}.tbl thead th{padding:7px 5px;border:1px solid #ddd;border-bottom:1px solid #ddd;font-size:13px;font-weight:700}.tbl tbody td{padding:7px 5px;-webkit-box-sizing:border-box;box-sizing:border-box;font-size:12px;border-bottom:1px solid #ddd;border-left:1px solid #ddd}.tbl tr:hover td{background-color:#f9f9f9}.status span{display:inline-block;font-size:12px;color:#d71921;background:0 0}.status span.off:before{content:"○";font-weight:700}.status span.on:before{content:"●"}@media all and (min-width:320px) and (max-width:767px){.utill-area{display:none}.pjt-box{padding:10px 15px}.pjt-tit h2{float:none;font-size:20px}.pjt-tit ul{float:none;margin-top:8px}.pjt-tit ul li{font-size:11px}.pjt-tit ul li span{font-size:11px}.pjt-tit ul li em{margin:0}.count{text-align:center}.btn-area{float:none;margin-top:10px}.tbl{table-layout:auto}.pjt-head{display:none}.depth{display:block}.pjt-depth{display:block;width:100%}.tbl{display:block}.tbl tbody td{display:block;border-left:0}.tbl tbody{display:block}.tbl tbody tr{display:block;position:relative}.tbl tbody td:nth-child(-n+5){display:none}.tbl tbody td:nth-child(7){display:none}.tbl tbody td:nth-child(9){display:none}.tbl tbody td:nth-child(11){display:none}.tbl tbody td:first-child{display:block;text-align:left;min-height:31px}.tbl tbody tr.noteArea{display:none}.tbl tbody td.url{width:auto;text-align:left}.tbl tbody td.date{width:auto;min-width:80px;min-height:30px;border-left:1px solid #ddd;position:absolute;top:0;right:0;border-bottom:0}.tbl tbody td.memo{width:auto;position:absolute;top:5px;right:90px;border-bottom:0;padding:0}.btn-area{display:none}.noteArea pre{text-align:left}.noteArea.on{display:block !important}}
+    </style>
+    <script>
+        $(function(){var t=$(".tbl tbody td.status span"),n=$(".tbl tbody td.date");n.each(function(){var n=$(this).text().length;n>0&&$(this).siblings(t).children("span").attr("class","on")});var e=$(".noteArea pre");e.each(function(){var t=$(this).text().length;t>0&&$(this).parents("td").parents("tr").prev("tr").children("td.memo").append("<button class='memoBtn'></button>")}),$(".memoBtn").on("click",function(){$(this).toggleClass("active"),$(this).parents("tr").next(".noteArea").toggleClass('on')});var a=$("#pCount"),o=$("#cCount"),s=$("#progress"),r=$(".tbl").find("a").length,i=$(".tbl").find("span.on").length,l=(i/r*100).toFixed(3);a.html(r),o.html(i),s.html(l),$(".o-btn").on("click",function(){$(".noteArea").show(),$(".memoBtn").addClass("active");var t=$("pre.note:empty");t&&t.parents("td").parents("tr.noteArea").hide()}),$(".c-btn").on("click",function(){$(".noteArea").hide(),$(".memoBtn").removeClass("active")})});
+		$(function(){var $tblTr=$("table tbody tr"),trLen=$tblTr.length,count=0;$tblTr.each(function(idx){var tblTd9=$(this).find("td:eq(8)"),tblTd8=$(this).find("td:eq(7)");tblTd8Txt=$(this).find("td:eq(7)").text();$("select").on('change',function(){var selectTxt=$("select option:selected").val();if(selectTxt==tblTd9.text()&&tblTd8.text().length>0){tblTd9.parent().show().addClass("sName")}else if(selectTxt=="작업자"){tblTd9.parent().show().removeClass("sName")}else{tblTd9.parent().hide().removeClass("sName")}})})});
+    </script>
+
+ </body>
+
+</html>
